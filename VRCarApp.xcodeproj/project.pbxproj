@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0756C9719D4EA2E84DD41E47 /* Pods_VRCarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD1C1C1F821B841D34C764B /* Pods_VRCarApp.framework */; };
+		A7083819219DA3670097F827 /* MQTTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7083818219DA3670097F827 /* MQTTManager.swift */; };
+		A726FC17219C197000F53573 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726FC16219C197000F53573 /* PresenterProtocol.swift */; };
 		A72AB99821941A72000B42BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AB99721941A72000B42BE /* AppDelegate.swift */; };
 		A72AB99A21941A72000B42BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AB99921941A72000B42BE /* ViewController.swift */; };
 		A72AB99D21941A72000B42BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72AB99B21941A72000B42BE /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53EEB390A1866D86773165EF /* Pods-VRCarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRCarApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VRCarApp/Pods-VRCarApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A7083818219DA3670097F827 /* MQTTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTManager.swift; sourceTree = "<group>"; };
+		A726FC16219C197000F53573 /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
 		A72AB99421941A72000B42BE /* VRCarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRCarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72AB99721941A72000B42BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A72AB99921941A72000B42BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +30,8 @@
 		A72AB9A121941A72000B42BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A72AB9A421941A72000B42BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A72AB9A621941A72000B42BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A72F2F99A45DB546ADA628AF /* Pods-VRCarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRCarApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VRCarApp/Pods-VRCarApp.release.xcconfig"; sourceTree = "<group>"; };
+		CAD1C1C1F821B841D34C764B /* Pods_VRCarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VRCarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0756C9719D4EA2E84DD41E47 /* Pods_VRCarApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				A72AB99621941A72000B42BE /* VRCarApp */,
 				A72AB99521941A72000B42BE /* Products */,
+				BE45BBFD816F86CFF8703D84 /* Pods */,
+				FE940CA57079272477119C54 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +74,27 @@
 				A72AB9A321941A72000B42BE /* LaunchScreen.storyboard */,
 				A72AB9A621941A72000B42BE /* Info.plist */,
 				A72AB99E21941A72000B42BE /* VRCarApp.xcdatamodeld */,
+				A726FC16219C197000F53573 /* PresenterProtocol.swift */,
+				A7083818219DA3670097F827 /* MQTTManager.swift */,
 			);
 			path = VRCarApp;
+			sourceTree = "<group>";
+		};
+		BE45BBFD816F86CFF8703D84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53EEB390A1866D86773165EF /* Pods-VRCarApp.debug.xcconfig */,
+				A72F2F99A45DB546ADA628AF /* Pods-VRCarApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FE940CA57079272477119C54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1C1C1F821B841D34C764B /* Pods_VRCarApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A72AB9A921941A72000B42BE /* Build configuration list for PBXNativeTarget "VRCarApp" */;
 			buildPhases = (
+				F48832FE0BA6B4B2D4B5B6B6 /* [CP] Check Pods Manifest.lock */,
 				A72AB99021941A72000B42BE /* Sources */,
 				A72AB99121941A72000B42BE /* Frameworks */,
 				A72AB99221941A72000B42BE /* Resources */,
+				C16CE99A1750791AE4150A00 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,14 +166,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C16CE99A1750791AE4150A00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VRCarApp/Pods-VRCarApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyTimer/SwiftyTimer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaMQTT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyTimer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VRCarApp/Pods-VRCarApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F48832FE0BA6B4B2D4B5B6B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VRCarApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A72AB99021941A72000B42BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A726FC17219C197000F53573 /* PresenterProtocol.swift in Sources */,
 				A72AB99A21941A72000B42BE /* ViewController.swift in Sources */,
 				A72AB99821941A72000B42BE /* AppDelegate.swift in Sources */,
 				A72AB9A021941A72000B42BE /* VRCarApp.xcdatamodeld in Sources */,
+				A7083819219DA3670097F827 /* MQTTManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +353,13 @@
 		};
 		A72AB9AA21941A72000B42BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53EEB390A1866D86773165EF /* Pods-VRCarApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5G28H99SW;
 				INFOPLIST_FILE = VRCarApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pallaksingh.VRCarApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,11 +370,13 @@
 		};
 		A72AB9AB21941A72000B42BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A72F2F99A45DB546ADA628AF /* Pods-VRCarApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5G28H99SW;
 				INFOPLIST_FILE = VRCarApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pallaksingh.VRCarApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

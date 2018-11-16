@@ -1,0 +1,6 @@
+framework module Pods_VRCarApp {
+  umbrella header "Pods-VRCarApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
