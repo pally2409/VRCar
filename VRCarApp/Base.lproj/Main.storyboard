@@ -10,13 +10,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-            <string>HelveticaNeue-Bold</string>
-            <string>HelveticaNeue-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Video-->
         <scene sceneID="K4L-nr-VKL">
@@ -28,7 +21,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5p-S5-tr0">
                                 <rect key="frame" x="16" y="53" width="343" height="41"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -38,7 +31,7 @@
                                     <constraint firstAttribute="height" constant="270" id="FsI-9R-mdC"/>
                                     <constraint firstAttribute="width" constant="270" id="Kl8-aY-Kal"/>
                                 </constraints>
-                                <state key="normal" image="connectedsign" backgroundImage="connectedsign"/>
+                                <state key="normal" image="conntbutton" backgroundImage="conntbutton"/>
                                 <connections>
                                     <segue destination="N60-Aj-ZN2" kind="show" id="RSm-c6-OPB"/>
                                 </connections>
@@ -120,7 +113,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60H-HT-FPf">
                                 <rect key="frame" x="16" y="53" width="343" height="41"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -128,16 +121,16 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="76"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5B-OV-17a">
-                                        <rect key="frame" x="101" y="17" width="190" height="26"/>
+                                        <rect key="frame" x="101" y="17" width="217" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video Playback Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ud-uk-62Y">
-                                        <rect key="frame" x="101" y="43" width="190" height="20"/>
+                                        <rect key="frame" x="103" y="41" width="190" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.61960784313725492" green="0.61568627450980395" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -164,8 +157,8 @@
                                         <rect key="frame" x="302" y="12" width="51" height="31"/>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gyroscope Driving Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecc-jO-XiU">
-                                        <rect key="frame" x="17" y="16" width="223" height="23"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <rect key="frame" x="17" y="15.666666666666657" width="215.33333333333334" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -181,89 +174,69 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQb-VZ-rsh">
-                                <rect key="frame" x="8" y="265" width="359" height="50.333333333333314"/>
+                                <rect key="frame" x="8" y="270" width="359" height="50.333333333333314"/>
                                 <string key="text">This option lets you turn the car based on your head movements, please wear the VR headset for this option to function properly.</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <color key="textColor" red="0.58431372549019611" green="0.58431372549019611" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2yI-Dg-7yi">
-                                <rect key="frame" x="0.0" y="323" width="375" height="55"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable GPS Tracking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1P-SQ-90n">
-                                        <rect key="frame" x="17" y="16" width="189" height="23"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KV7-GX-ce2">
-                                        <rect key="frame" x="302" y="12" width="51" height="31"/>
-                                    </switch>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="KV7-GX-ce2" secondAttribute="trailing" constant="24" id="1ui-XC-AeJ"/>
-                                    <constraint firstAttribute="height" constant="55" id="HLT-1U-IuW"/>
-                                    <constraint firstItem="L1P-SQ-90n" firstAttribute="centerY" secondItem="2yI-Dg-7yi" secondAttribute="centerY" id="Rtz-vq-2p9"/>
-                                    <constraint firstItem="KV7-GX-ce2" firstAttribute="centerY" secondItem="2yI-Dg-7yi" secondAttribute="centerY" id="aXu-lB-n0J"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="L1P-SQ-90n" secondAttribute="trailing" constant="20" symbolic="YES" id="lBV-fv-j5F"/>
-                                    <constraint firstItem="L1P-SQ-90n" firstAttribute="leading" secondItem="2yI-Dg-7yi" secondAttribute="leading" constant="17" id="pQC-1r-2Pq"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This option enables the GPS module on car and logs location every 30 seconds. This may increase battery usage." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaO-3W-y4J">
-                                <rect key="frame" x="8" y="378" width="359" height="50.333333333333314"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This option allows you to adjust car speed." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaO-3W-y4J">
+                                <rect key="frame" x="8" y="409" width="359" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <color key="textColor" red="0.58431372550000005" green="0.58431372550000005" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET CAR SPEED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Py-Ge-8YQ">
-                                <rect key="frame" x="8" y="436" width="277" height="17"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <rect key="frame" x="8" y="329" width="277" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.44705882352941179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-pd-p9M">
-                                <rect key="frame" x="0.0" y="456" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="349" width="375" height="55"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oxK-3i-ay9">
-                                        <rect key="frame" x="38" y="5" width="299" height="31"/>
-                                    </slider>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QU5-hY-5f5">
+                                        <rect key="frame" x="50" y="13.666666666666686" width="275" height="29"/>
+                                        <segments>
+                                            <segment title="Low"/>
+                                            <segment title="Medium"/>
+                                            <segment title="High"/>
+                                        </segments>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="oxK-3i-ay9" firstAttribute="centerX" secondItem="wLV-pd-p9M" secondAttribute="centerX" id="CdM-II-GQO"/>
-                                    <constraint firstAttribute="height" constant="40" id="KJJ-xH-vA7"/>
-                                    <constraint firstItem="oxK-3i-ay9" firstAttribute="centerY" secondItem="wLV-pd-p9M" secondAttribute="centerY" id="W6i-vz-MGk"/>
-                                    <constraint firstItem="oxK-3i-ay9" firstAttribute="leading" secondItem="wLV-pd-p9M" secondAttribute="leading" constant="40" id="qJI-oF-hyg"/>
+                                    <constraint firstAttribute="trailing" secondItem="QU5-hY-5f5" secondAttribute="trailing" constant="50" id="7EU-eF-AEb"/>
+                                    <constraint firstItem="QU5-hY-5f5" firstAttribute="centerY" secondItem="wLV-pd-p9M" secondAttribute="centerY" id="Aj2-kZ-HHR"/>
+                                    <constraint firstItem="QU5-hY-5f5" firstAttribute="centerX" secondItem="wLV-pd-p9M" secondAttribute="centerX" id="B54-ml-nSZ"/>
+                                    <constraint firstAttribute="height" constant="55" id="KJJ-xH-vA7"/>
+                                    <constraint firstItem="QU5-hY-5f5" firstAttribute="leading" secondItem="wLV-pd-p9M" secondAttribute="leading" constant="50" id="Zyy-5D-9iC"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VAh-qM-Cnf" firstAttribute="trailing" secondItem="6hc-tr-jGH" secondAttribute="trailing" id="2MG-zp-Itz"/>
-                            <constraint firstItem="2yI-Dg-7yi" firstAttribute="top" secondItem="VAh-qM-Cnf" secondAttribute="top" constant="279" id="6d3-up-Jfe"/>
                             <constraint firstItem="d7p-zN-BB8" firstAttribute="top" secondItem="VAh-qM-Cnf" secondAttribute="top" constant="72" id="6ec-j5-NSL"/>
                             <constraint firstItem="60H-HT-FPf" firstAttribute="leading" secondItem="VAh-qM-Cnf" secondAttribute="leading" constant="16" id="B7P-te-RuZ"/>
                             <constraint firstItem="d7p-zN-BB8" firstAttribute="leading" secondItem="VAh-qM-Cnf" secondAttribute="leading" id="GO8-b8-Z0Q"/>
                             <constraint firstItem="wLV-pd-p9M" firstAttribute="trailing" secondItem="VAh-qM-Cnf" secondAttribute="trailing" id="HiF-de-lrs"/>
                             <constraint firstItem="VAh-qM-Cnf" firstAttribute="trailing" secondItem="FaO-3W-y4J" secondAttribute="trailing" constant="8" id="JCv-y0-DMy"/>
                             <constraint firstItem="VAh-qM-Cnf" firstAttribute="trailing" secondItem="AQb-VZ-rsh" secondAttribute="trailing" constant="8" id="LmA-An-Rle"/>
-                            <constraint firstItem="2yI-Dg-7yi" firstAttribute="leading" secondItem="VAh-qM-Cnf" secondAttribute="leading" id="NdP-kD-xL7"/>
                             <constraint firstItem="6hc-tr-jGH" firstAttribute="top" secondItem="VAh-qM-Cnf" secondAttribute="top" constant="166" id="R1d-Gc-Jwq"/>
                             <constraint firstItem="VAh-qM-Cnf" firstAttribute="trailing" secondItem="6Py-Ge-8YQ" secondAttribute="trailing" constant="90" id="WxP-x3-WIP"/>
-                            <constraint firstItem="wLV-pd-p9M" firstAttribute="top" secondItem="VAh-qM-Cnf" secondAttribute="top" constant="412" id="XCD-Gg-RMe"/>
+                            <constraint firstItem="wLV-pd-p9M" firstAttribute="top" secondItem="VAh-qM-Cnf" secondAttribute="top" constant="305" id="XCD-Gg-RMe"/>
                             <constraint firstItem="6hc-tr-jGH" firstAttribute="leading" secondItem="VAh-qM-Cnf" secondAttribute="leading" id="a9g-Mu-Mvu"/>
                             <constraint firstItem="AQb-VZ-rsh" firstAttribute="leading" secondItem="VAh-qM-Cnf" secondAttribute="leading" constant="8" id="dwn-MZ-r5Z"/>
+                            <constraint firstItem="FaO-3W-y4J" firstAttribute="top" secondItem="wLV-pd-p9M" secondAttribute="top" constant="60" id="fwy-tQ-iOY"/>
                             <constraint firstItem="6Py-Ge-8YQ" firstAttribute="leading" secondItem="VAh-qM-Cnf" secondAttribute="leading" constant="8" id="ggO-AH-b4o"/>
-                            <constraint firstItem="AQb-VZ-rsh" firstAttribute="top" secondItem="6hc-tr-jGH" secondAttribute="bottom" id="i9y-E7-80Q"/>
+                            <constraint firstItem="AQb-VZ-rsh" firstAttribute="top" secondItem="6hc-tr-jGH" secondAttribute="bottom" constant="5" id="i9y-E7-80Q"/>
                             <constraint firstItem="VAh-qM-Cnf" firstAttribute="trailing" secondItem="60H-HT-FPf" secondAttribute="trailing" constant="16" id="k5x-Dv-Qib"/>
                             <constraint firstItem="wLV-pd-p9M" firstAttribute="leading" secondItem="VAh-qM-Cnf" secondAttribute="leading" id="l0s-gE-gR9"/>
                             <constraint firstItem="60H-HT-FPf" firstAttribute="top" secondItem="VAh-qM-Cnf" secondAttribute="top" constant="9" id="oYJ-8i-tgk"/>
-                            <constraint firstItem="6Py-Ge-8YQ" firstAttribute="top" secondItem="VAh-qM-Cnf" secondAttribute="top" constant="392" id="pbn-Ob-TUo"/>
+                            <constraint firstItem="6Py-Ge-8YQ" firstAttribute="top" secondItem="VAh-qM-Cnf" secondAttribute="top" constant="285" id="pbn-Ob-TUo"/>
                             <constraint firstItem="FaO-3W-y4J" firstAttribute="leading" secondItem="VAh-qM-Cnf" secondAttribute="leading" constant="8" id="r75-nS-TC6"/>
-                            <constraint firstItem="FaO-3W-y4J" firstAttribute="top" secondItem="2yI-Dg-7yi" secondAttribute="bottom" id="rmn-jg-fhL"/>
                             <constraint firstItem="VAh-qM-Cnf" firstAttribute="trailing" secondItem="d7p-zN-BB8" secondAttribute="trailing" id="z0f-uM-C4e"/>
-                            <constraint firstItem="2yI-Dg-7yi" firstAttribute="trailing" secondItem="VAh-qM-Cnf" secondAttribute="trailing" id="zm8-Er-sjz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VAh-qM-Cnf"/>
                     </view>
@@ -296,6 +269,7 @@
     <resources>
         <image name="aboutusicon" width="30" height="30"/>
         <image name="connectedsign" width="100" height="100"/>
+        <image name="conntbutton" width="270" height="270"/>
         <image name="settingsicon" width="30" height="30"/>
         <image name="settingsiconselected" width="30" height="30"/>
         <image name="videoicon" width="30" height="30"/>
