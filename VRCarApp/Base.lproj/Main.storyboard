@@ -21,7 +21,7 @@
         <!--Video-->
         <scene sceneID="K4L-nr-VKL">
             <objects>
-                <viewController id="8DU-6S-k3S" sceneMemberID="viewController">
+                <viewController id="8DU-6S-k3S" customClass="VideoViewController" customModule="VRCarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O0E-s7-M8b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,6 +39,9 @@
                                     <constraint firstAttribute="width" constant="270" id="Kl8-aY-Kal"/>
                                 </constraints>
                                 <state key="normal" image="connectedsign" backgroundImage="connectedsign"/>
+                                <connections>
+                                    <segue destination="N60-Aj-ZN2" kind="show" id="RSm-c6-OPB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,6 +59,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CmI-he-jVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708" y="66.502463054187189"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="FHs-dX-JpN">
+            <objects>
+                <viewController id="N60-Aj-ZN2" customClass="WebViewController" customModule="VRCarApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZLA-oe-N9g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8I-Di-u9N">
+                                <rect key="frame" x="0.0" y="20" width="375" height="792"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z8I-Di-u9N" firstAttribute="top" secondItem="ZLA-oe-N9g" secondAttribute="top" constant="20" id="20g-3r-fgX"/>
+                            <constraint firstAttribute="bottom" secondItem="z8I-Di-u9N" secondAttribute="bottom" id="Dav-SK-mJc"/>
+                            <constraint firstItem="z8I-Di-u9N" firstAttribute="trailing" secondItem="dko-nF-CFb" secondAttribute="trailing" id="Tb5-Tc-6XZ"/>
+                            <constraint firstItem="z8I-Di-u9N" firstAttribute="leading" secondItem="dko-nF-CFb" secondAttribute="leading" id="t7n-iw-aEs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dko-nF-CFb"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="z8I-Di-u9N" id="uk0-I6-Kjq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nic-ab-Kqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1736.8" y="66.502463054187189"/>
         </scene>
         <!--About Us-->
         <scene sceneID="hJ4-mb-3Hn">

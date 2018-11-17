@@ -16,6 +16,8 @@
 		A72AB9A021941A72000B42BE /* VRCarApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A72AB99E21941A72000B42BE /* VRCarApp.xcdatamodeld */; };
 		A72AB9A221941A72000B42BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72AB9A121941A72000B42BE /* Assets.xcassets */; };
 		A72AB9A521941A72000B42BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72AB9A321941A72000B42BE /* LaunchScreen.storyboard */; };
+		A787BBBD219FC964000801DF /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A787BBBC219FC964000801DF /* VideoViewController.swift */; };
+		A787BBBF219FCA64000801DF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A787BBBE219FCA64000801DF /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		A72AB9A421941A72000B42BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A72AB9A621941A72000B42BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A72F2F99A45DB546ADA628AF /* Pods-VRCarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRCarApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VRCarApp/Pods-VRCarApp.release.xcconfig"; sourceTree = "<group>"; };
+		A787BBBC219FC964000801DF /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		A787BBBE219FCA64000801DF /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CAD1C1C1F821B841D34C764B /* Pods_VRCarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VRCarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,6 +73,7 @@
 			children = (
 				A72AB99721941A72000B42BE /* AppDelegate.swift */,
 				A72AB99921941A72000B42BE /* ViewController.swift */,
+				A787BBBC219FC964000801DF /* VideoViewController.swift */,
 				A72AB99B21941A72000B42BE /* Main.storyboard */,
 				A72AB9A121941A72000B42BE /* Assets.xcassets */,
 				A72AB9A321941A72000B42BE /* LaunchScreen.storyboard */,
@@ -76,6 +81,7 @@
 				A72AB99E21941A72000B42BE /* VRCarApp.xcdatamodeld */,
 				A726FC16219C197000F53573 /* PresenterProtocol.swift */,
 				A7083818219DA3670097F827 /* MQTTManager.swift */,
+				A787BBBE219FCA64000801DF /* WebViewController.swift */,
 			);
 			path = VRCarApp;
 			sourceTree = "<group>";
@@ -216,7 +222,9 @@
 			files = (
 				A726FC17219C197000F53573 /* PresenterProtocol.swift in Sources */,
 				A72AB99A21941A72000B42BE /* ViewController.swift in Sources */,
+				A787BBBD219FC964000801DF /* VideoViewController.swift in Sources */,
 				A72AB99821941A72000B42BE /* AppDelegate.swift in Sources */,
+				A787BBBF219FCA64000801DF /* WebViewController.swift in Sources */,
 				A72AB9A021941A72000B42BE /* VRCarApp.xcdatamodeld in Sources */,
 				A7083819219DA3670097F827 /* MQTTManager.swift in Sources */,
 			);
