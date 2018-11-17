@@ -106,7 +106,7 @@
         <!--Settings-->
         <scene sceneID="BSN-T4-uwu">
             <objects>
-                <viewController id="kkn-By-Ndm" sceneMemberID="viewController">
+                <viewController id="kkn-By-Ndm" customClass="SettingsViewController" customModule="VRCarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8x7-gO-SgP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,6 +202,9 @@
                                             <segment title="Medium"/>
                                             <segment title="High"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="setCarSpeed:" destination="kkn-By-Ndm" eventType="valueChanged" id="T9s-4e-A52"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -241,6 +244,9 @@
                         <viewLayoutGuide key="safeArea" id="VAh-qM-Cnf"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settingsicon" selectedImage="settingsiconselected" id="fdU-cy-D1V"/>
+                    <connections>
+                        <outlet property="carSpeedOptions" destination="QU5-hY-5f5" id="d0e-0r-Y59"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehK-at-Ua4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

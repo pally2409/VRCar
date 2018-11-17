@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0756C9719D4EA2E84DD41E47 /* Pods_VRCarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD1C1C1F821B841D34C764B /* Pods_VRCarApp.framework */; };
+		A7065F5821A00153006D097F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7065F5721A00153006D097F /* SettingsViewController.swift */; };
 		A7083819219DA3670097F827 /* MQTTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7083818219DA3670097F827 /* MQTTManager.swift */; };
 		A726FC17219C197000F53573 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726FC16219C197000F53573 /* PresenterProtocol.swift */; };
 		A72AB99821941A72000B42BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AB99721941A72000B42BE /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		53EEB390A1866D86773165EF /* Pods-VRCarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRCarApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VRCarApp/Pods-VRCarApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A7065F5721A00153006D097F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A7083818219DA3670097F827 /* MQTTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTManager.swift; sourceTree = "<group>"; };
 		A726FC16219C197000F53573 /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
 		A72AB99421941A72000B42BE /* VRCarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRCarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 				A726FC16219C197000F53573 /* PresenterProtocol.swift */,
 				A7083818219DA3670097F827 /* MQTTManager.swift */,
 				A787BBBE219FCA64000801DF /* WebViewController.swift */,
+				A7065F5721A00153006D097F /* SettingsViewController.swift */,
 			);
 			path = VRCarApp;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				A787BBBF219FCA64000801DF /* WebViewController.swift in Sources */,
 				A72AB9A021941A72000B42BE /* VRCarApp.xcdatamodeld in Sources */,
 				A7083819219DA3670097F827 /* MQTTManager.swift in Sources */,
+				A7065F5821A00153006D097F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
