@@ -20,8 +20,8 @@ class ViewController: UITabBarController {
         tabBarController?.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
         print("hello")
-        let ipAddressField = "192.168.13.197"
-        let topic = "trail"
+        let ipAddressField = "192.168.0.8"
+        let topic = "DriveChannel"
         mqttManager = MQTTManager.shared(host: ipAddressField,topic: topic)
         mqttManager.connect()
         
@@ -33,10 +33,11 @@ class ViewController: UITabBarController {
     
     
     var isFirst  = true;
-    
+    var flag = 0
+    var flagz = 0
     override func viewDidAppear(_ animated: Bool) {
         var initialAttitude = CMAttitude()
-        motionManager.deviceMotionUpdateInterval = 0.5
+        motionManager.deviceMotionUpdateInterval = 0.1
         motionManager.startDeviceMotionUpdates(using: CMAttitudeReferenceFrame.xArbitraryZVertical, to: OperationQueue.current!){ (motiondata, err) in
             guard let data = motiondata else {return}
             
@@ -51,23 +52,42 @@ class ViewController: UITabBarController {
                 
                 print(pitch)
                 if pitch < -50 {
-                    self.mqttManager.publish(with: "right")
-                    
+                    if self.flag < 1{
+                    self.mqttManager.publish(with: "3")
+                    self.flagz=0
+                    }
+                    self.flag=self.flag+1
                 }
                 
                 if pitch > 50 {
-                    self.mqttManager.publish(with: "left")
+                    if self.flag < 1{
+                    self.mqttManager.publish(with: "2")
+                    self.flagz=0
+                    }
+                    self.flag=self.flag+1
                 }
                 
                 if roll < -50 {
-                    self.mqttManager.publish(with: "up")
-                    
+                    if self.flag < 1{
+                    self.mqttManager.publish(with: "4")
+                    self.flagz=0
+                    }
+                    self.flag=self.flag+1
                 }
                 
                 if roll > 50 {
-                    self.mqttManager.publish(with: "down")
+                    if self.flag < 1{
+                    self.mqttManager.publish(with: "1")
+                    self.flagz=0
+                    }
+                    self.flag=self.flag+1
                 } else if roll < 50 && roll > -50 && pitch < 50 && pitch > -50 {
+                    if self.flagz < 1{
                     self.mqttManager.publish(with: "0")
+                        self.flag = 0
+                    }
+                    self.flagz=self.flagz + 1
+                    
                 }
                 
                 
