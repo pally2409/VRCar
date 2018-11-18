@@ -15,6 +15,7 @@ class MQTTManager {
     private var identifier:String!
     private var host:String!
     private var topic:String!
+    private var connected = false
     //private weak var presenter:PresenterProtocol!
     // Private Init
     private init() {
@@ -50,6 +51,13 @@ class MQTTManager {
         mqtt?.connect()
     }
     
+    func checkConnected() -> Bool{
+        if connected == true {
+            return true
+        } else {
+            return false
+        }
+    }
     
     
     func disconnect() {
@@ -74,6 +82,7 @@ class MQTTManager {
 extension MQTTManager: CocoaMQTTDelegate{
     
     func mqtt(_ mqtt: CocoaMQTT, didConnect host: String, port: Int) {
+        connected = true;
         
     }
 
