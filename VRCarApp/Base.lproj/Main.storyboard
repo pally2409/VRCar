@@ -153,8 +153,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hc-tr-jGH">
                                 <rect key="frame" x="0.0" y="210" width="375" height="55"/>
                                 <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BhD-Ke-wrx">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BhD-Ke-wrx">
                                         <rect key="frame" x="302" y="12" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="onSwitchChanged:" destination="kkn-By-Ndm" eventType="valueChanged" id="9C9-IQ-0tJ"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gyroscope Driving Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecc-jO-XiU">
                                         <rect key="frame" x="17" y="15.666666666666657" width="215.33333333333334" height="24"/>
@@ -246,6 +249,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="settingsicon" selectedImage="settingsiconselected" id="fdU-cy-D1V"/>
                     <connections>
                         <outlet property="carSpeedOptions" destination="QU5-hY-5f5" id="d0e-0r-Y59"/>
+                        <outlet property="drivingModeSwitch" destination="BhD-Ke-wrx" id="kG6-4x-ArU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehK-at-Ua4" userLabel="First Responder" sceneMemberID="firstResponder"/>

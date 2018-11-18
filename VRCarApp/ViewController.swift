@@ -9,21 +9,35 @@
 import UIKit
 import CocoaMQTT
 import CoreMotion
+import CoreData
 
 class ViewController: UITabBarController {
     
-    private var mqttManager:MQTTManager!
-    var motionManager = CMMotionManager()
-
+//    private var mqttManager:MQTTManager!
+//    var motionManager = CMMotionManager()
+    
+   
+    var carSpeed = 0
+    var gyroMode = false
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarController?.delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
-        print("hello")
-        let ipAddressField = "192.168.0.8"
-        let topic = "DriveChannel"
-        mqttManager = MQTTManager.shared(host: ipAddressField,topic: topic)
-        mqttManager.connect()
+        if let x = UserDefaults.standard.object(forKey: "speed") as? Int {
+            carSpeed = x
+        }
+        
+        if let y = UserDefaults.standard.object(forKey: "gyroMode") as? Bool {
+            gyroMode = y
+        }
+    
+        
+        
+        
+//        print("hello")
+//        let ipAddressField = "192.168.0.8"
+//        let topic = "DriveChannel"
+//        mqttManager = MQTTManager.shared(host: ipAddressField,topic: topic)
+//        mqttManager.connect()
         
         
 
@@ -32,70 +46,70 @@ class ViewController: UITabBarController {
   
     
     
-    var isFirst  = true;
-    var flag = 0
-    var flagz = 0
+//    var isFirst  = true;
+//    var flag = 0
+//    var flagz = 0
     override func viewDidAppear(_ animated: Bool) {
-        var initialAttitude = CMAttitude()
-        motionManager.deviceMotionUpdateInterval = 0.1
-        motionManager.startDeviceMotionUpdates(using: CMAttitudeReferenceFrame.xArbitraryZVertical, to: OperationQueue.current!){ (motiondata, err) in
-            guard let data = motiondata else {return}
-            
-             if self.isFirst == true {
-                initialAttitude = data.attitude
-                self.isFirst = false
-            } else {
-                let attitude = data.attitude
-                attitude.multiply(byInverseOf: initialAttitude)
-                let pitch = self.radiansToDegrees(attitude.pitch)
-                let roll = self.radiansToDegrees(attitude.roll)
-                
-                print(pitch)
-                if pitch < -50 {
-                    if self.flag < 1{
-                    self.mqttManager.publish(with: "3")
-                    self.flagz=0
-                    }
-                    self.flag=self.flag+1
-                }
-                
-                if pitch > 50 {
-                    if self.flag < 1{
-                    self.mqttManager.publish(with: "2")
-                    self.flagz=0
-                    }
-                    self.flag=self.flag+1
-                }
-                
-                if roll < -50 {
-                    if self.flag < 1{
-                    self.mqttManager.publish(with: "4")
-                    self.flagz=0
-                    }
-                    self.flag=self.flag+1
-                }
-                
-                if roll > 50 {
-                    if self.flag < 1{
-                    self.mqttManager.publish(with: "1")
-                    self.flagz=0
-                    }
-                    self.flag=self.flag+1
-                } else if roll < 50 && roll > -50 && pitch < 50 && pitch > -50 {
-                    if self.flagz < 1{
-                    self.mqttManager.publish(with: "0")
-                        self.flag = 0
-                    }
-                    self.flagz=self.flagz + 1
-                    
-                }
-                
-                
-                
-                print(roll)
-            }
-            
-        }
+//        var initialAttitude = CMAttitude()
+//        motionManager.deviceMotionUpdateInterval = 0.1
+//        motionManager.startDeviceMotionUpdates(using: CMAttitudeReferenceFrame.xArbitraryZVertical, to: OperationQueue.current!){ (motiondata, err) in
+//            guard let data = motiondata else {return}
+//
+//             if self.isFirst == true {
+//                initialAttitude = data.attitude
+//                self.isFirst = false
+//            } else {
+//                let attitude = data.attitude
+//                attitude.multiply(byInverseOf: initialAttitude)
+//                let pitch = self.radiansToDegrees(attitude.pitch)
+//                let roll = self.radiansToDegrees(attitude.roll)
+//
+//                print(pitch)
+//                if pitch < -50 {
+//                    if self.flag < 1{
+//                    self.mqttManager.publish(with: "3")
+//                    self.flagz=0
+//                    }
+//                    self.flag=self.flag+1
+//                }
+//
+//                if pitch > 50 {
+//                    if self.flag < 1{
+//                    self.mqttManager.publish(with: "2")
+//                    self.flagz=0
+//                    }
+//                    self.flag=self.flag+1
+//                }
+//
+//                if roll < -50 {
+//                    if self.flag < 1{
+//                    self.mqttManager.publish(with: "4")
+//                    self.flagz=0
+//                    }
+//                    self.flag=self.flag+1
+//                }
+//
+//                if roll > 50 {
+//                    if self.flag < 1{
+//                    self.mqttManager.publish(with: "1")
+//                    self.flagz=0
+//                    }
+//                    self.flag=self.flag+1
+//                } else if roll < 50 && roll > -50 && pitch < 50 && pitch > -50 {
+//                    if self.flagz < 1{
+//                    self.mqttManager.publish(with: "0")
+//                        self.flag = 0
+//                    }
+//                    self.flagz=self.flagz + 1
+//
+//                }
+//
+//
+//
+//                print(roll)
+//            }
+//
+        
         
         
         
@@ -187,8 +201,8 @@ class ViewController: UITabBarController {
     func radiansToDegrees(_ radian: Double) -> Float {
         return Float(radian * 180.0/Double.pi)
     }
-
 }
+
 
 //extension ViewController: PresenterProtocol{
 //

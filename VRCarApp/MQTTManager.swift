@@ -50,12 +50,23 @@ class MQTTManager {
         mqtt?.connect()
     }
     
+    
+    
+    func disconnect() {
+        mqtt?.disconnect()
+        
+    }
+    
+    
+    
     func subscribe(){
         mqtt?.subscribe(topic, qos: .qos1)
     }
     func publish(with message:String){
         mqtt?.publish(topic, withString: message, qos: .qos1)
     }
+    
+    
 }
 
 
