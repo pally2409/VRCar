@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0756C9719D4EA2E84DD41E47 /* Pods_VRCarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD1C1C1F821B841D34C764B /* Pods_VRCarApp.framework */; };
+		853A7E4921A2883F00FDB9C4 /* RemoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A7E4821A2883F00FDB9C4 /* RemoteViewController.swift */; };
 		A7065F5821A00153006D097F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7065F5721A00153006D097F /* SettingsViewController.swift */; };
 		A7083819219DA3670097F827 /* MQTTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7083818219DA3670097F827 /* MQTTManager.swift */; };
 		A726FC17219C197000F53573 /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726FC16219C197000F53573 /* PresenterProtocol.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		53EEB390A1866D86773165EF /* Pods-VRCarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRCarApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VRCarApp/Pods-VRCarApp.debug.xcconfig"; sourceTree = "<group>"; };
+		853A7E4821A2883F00FDB9C4 /* RemoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteViewController.swift; sourceTree = "<group>"; };
 		A7065F5721A00153006D097F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A7083818219DA3670097F827 /* MQTTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTManager.swift; sourceTree = "<group>"; };
 		A726FC16219C197000F53573 /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				A7083818219DA3670097F827 /* MQTTManager.swift */,
 				A787BBBE219FCA64000801DF /* WebViewController.swift */,
 				A7065F5721A00153006D097F /* SettingsViewController.swift */,
+				853A7E4821A2883F00FDB9C4 /* RemoteViewController.swift */,
 			);
 			path = VRCarApp;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A726FC17219C197000F53573 /* PresenterProtocol.swift in Sources */,
+				853A7E4921A2883F00FDB9C4 /* RemoteViewController.swift in Sources */,
 				A72AB99A21941A72000B42BE /* ViewController.swift in Sources */,
 				A787BBBD219FC964000801DF /* VideoViewController.swift in Sources */,
 				A72AB99821941A72000B42BE /* AppDelegate.swift in Sources */,
@@ -369,11 +373,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K5G28H99SW;
+				DEVELOPMENT_TEAM = KF7YF7SZ72;
 				INFOPLIST_FILE = VRCarApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pallaksingh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mnk.vrcar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -386,11 +390,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K5G28H99SW;
+				DEVELOPMENT_TEAM = KF7YF7SZ72;
 				INFOPLIST_FILE = VRCarApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pallaksingh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mnk.vrcar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

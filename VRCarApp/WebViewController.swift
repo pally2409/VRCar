@@ -24,7 +24,8 @@ class WebViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        webView.loadUrl(string: "http://apple.com")
+        webView.loadUrl(string: "http://192.168.0.101:8000/browserfs.html")
+        
     }
 
     /*
