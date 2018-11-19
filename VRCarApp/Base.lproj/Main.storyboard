@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xne-eR-YCS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xne-eR-YCS">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -87,21 +86,93 @@
             </objects>
             <point key="canvasLocation" x="1736.8" y="66.502463054187189"/>
         </scene>
-        <!--About Us-->
+        <!--Remote-->
         <scene sceneID="hJ4-mb-3Hn">
             <objects>
-                <viewController id="2FN-si-5U4" sceneMemberID="viewController">
+                <viewController id="2FN-si-5U4" customClass="RemoteViewController" customModule="VRCarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2pe-UR-vRT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTf-Qw-bxn">
+                                <rect key="frame" x="67.666666666666686" y="266.66666666666669" width="240" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukt-Ys-She">
+                                        <rect key="frame" x="-10.000000000000007" y="80" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="arK-ZT-1dc"/>
+                                            <constraint firstAttribute="height" constant="80" id="bka-s2-V5G"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="left"/>
+                                        <connections>
+                                            <action selector="leftButtonHold:" destination="2FN-si-5U4" eventType="touchDown" id="9xX-RB-fY7"/>
+                                            <action selector="leftButtonPressed:" destination="2FN-si-5U4" eventType="touchUpInside" id="uFo-Sb-bDH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92550253868103027" green="0.92546778917312622" blue="0.92549145221710205" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="3xf-kB-ISI"/>
+                                    <constraint firstItem="ukt-Ys-She" firstAttribute="top" secondItem="UTf-Qw-bxn" secondAttribute="top" constant="80.000000000000057" id="UfM-L0-bQx"/>
+                                    <constraint firstAttribute="width" constant="240" id="YFQ-DX-qPD"/>
+                                    <constraint firstItem="ukt-Ys-She" firstAttribute="leading" secondItem="UTf-Qw-bxn" secondAttribute="leading" constant="-10" id="hAM-TV-b7n"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nz6-J8-5Qf">
+                                <rect key="frame" x="147" y="266.66666666666669" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="TqO-pZ-HYr"/>
+                                    <constraint firstAttribute="width" constant="80" id="hgI-m9-NrJ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="up"/>
+                                <connections>
+                                    <action selector="upButtonHold:" destination="2FN-si-5U4" eventType="touchDown" id="t8Q-yF-Lno"/>
+                                    <action selector="upButtonPressed:" destination="2FN-si-5U4" eventType="touchUpInside" id="hW9-Pj-nlO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nT9-Lm-hm7">
+                                <rect key="frame" x="235" y="346" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="XbH-Ii-ZXd"/>
+                                    <constraint firstAttribute="width" constant="80" id="x0h-UH-Lvg"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="right"/>
+                                <connections>
+                                    <action selector="rightButtonHold:" destination="2FN-si-5U4" eventType="touchDown" id="5fP-om-ejD"/>
+                                    <action selector="rightButtonPressed:" destination="2FN-si-5U4" eventType="touchUpInside" id="fXV-Fj-gvo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asl-ra-iQY">
+                                <rect key="frame" x="147" y="415" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="V9Y-LZ-ShS"/>
+                                    <constraint firstAttribute="height" constant="80" id="bNt-3M-FvN"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="back"/>
+                                <connections>
+                                    <action selector="backButtonHold:" destination="2FN-si-5U4" eventType="touchDown" id="b9K-pJ-DTC"/>
+                                    <action selector="backButtonPressed:" destination="2FN-si-5U4" eventType="touchUpInside" id="8u0-GW-UbL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92550253868103027" green="0.92546778917312622" blue="0.92549145221710205" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="UTf-Qw-bxn" firstAttribute="leading" secondItem="nz6-J8-5Qf" secondAttribute="trailing" constant="-159.33333333333331" id="QDV-vA-4G7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nT9-Lm-hm7" secondAttribute="trailing" constant="44" id="V5P-VL-q27"/>
+                            <constraint firstItem="Asl-ra-iQY" firstAttribute="top" secondItem="UTf-Qw-bxn" secondAttribute="top" constant="148.33333333333331" id="WZW-A7-KRq"/>
+                            <constraint firstItem="UTf-Qw-bxn" firstAttribute="centerX" secondItem="Qy9-7T-CHA" secondAttribute="centerX" id="cZ8-jX-uzd"/>
+                            <constraint firstItem="nz6-J8-5Qf" firstAttribute="top" secondItem="UTf-Qw-bxn" secondAttribute="top" id="dNy-ha-4Hc"/>
+                            <constraint firstItem="UTf-Qw-bxn" firstAttribute="centerY" secondItem="Qy9-7T-CHA" secondAttribute="centerY" id="g8z-06-vF6"/>
+                            <constraint firstItem="UTf-Qw-bxn" firstAttribute="top" secondItem="nT9-Lm-hm7" secondAttribute="bottom" constant="-159.33333333333331" id="qZF-46-yfP"/>
+                            <constraint firstItem="Asl-ra-iQY" firstAttribute="leading" secondItem="UTf-Qw-bxn" secondAttribute="leading" constant="79.333333333333314" id="vll-Pe-cgE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Qy9-7T-CHA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About Us" image="aboutusicon" id="UHY-NR-Hhf"/>
+                    <tabBarItem key="tabBarItem" title="Remote" image="aboutusicon" id="UHY-NR-Hhf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6J-vh-Ibf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708" y="840"/>
+            <point key="canvasLocation" x="708" y="839.40886699507394"/>
         </scene>
         <!--Settings-->
         <scene sceneID="BSN-T4-uwu">
@@ -135,7 +206,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connectedsign" translatesAutoresizingMaskIntoConstraints="NO" id="jTF-vf-r1A">
-                                        <rect key="frame" x="8" y="1" width="75" height="75"/>
+                                        <rect key="frame" x="8" y="0.6666666666666714" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="jTF-vf-r1A" secondAttribute="height" multiplier="1:1" id="FXf-A2-CRq"/>
                                             <constraint firstAttribute="height" constant="75" id="Peh-Kz-92Q"/>
@@ -277,11 +348,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="aboutusicon" width="30" height="30"/>
-        <image name="connectedsign" width="100" height="100"/>
-        <image name="conntbutton" width="270" height="270"/>
-        <image name="settingsicon" width="30" height="30"/>
-        <image name="settingsiconselected" width="30" height="30"/>
-        <image name="videoicon" width="30" height="30"/>
+        <image name="aboutusicon" width="7.1999998092651367" height="7.1999998092651367"/>
+        <image name="back" width="256" height="256"/>
+        <image name="connectedsign" width="24" height="24"/>
+        <image name="conntbutton" width="64.800003051757812" height="64.800003051757812"/>
+        <image name="left" width="256" height="256"/>
+        <image name="right" width="256" height="256"/>
+        <image name="settingsicon" width="7.1999998092651367" height="7.1999998092651367"/>
+        <image name="settingsiconselected" width="7.1999998092651367" height="7.1999998092651367"/>
+        <image name="up" width="256" height="256"/>
+        <image name="videoicon" width="7.1999998092651367" height="7.1999998092651367"/>
     </resources>
 </document>

@@ -109,17 +109,17 @@ class SettingsViewController: UIViewController {
         if carSpeedOptions.selectedSegmentIndex == 0{
             speed = 0
             print("Speed is low")
-            self.mqttManager.publish(with: "speed is 5")
+            self.mqttManager.publish(with: "5")
         }
         if carSpeedOptions.selectedSegmentIndex == 1 {
             speed = 1
             print("Speed is medium")
-            self.mqttManager.publish(with: "speed is 6")
+            self.mqttManager.publish(with: "6")
         }
         if carSpeedOptions.selectedSegmentIndex == 2 {
             speed = 2
             print("Speed is high")
-            self.mqttManager.publish(with: "speed is 7")
+            self.mqttManager.publish(with: "7")
         }
            
         
@@ -138,7 +138,7 @@ class SettingsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
        
     }
-    let ipAddressField = "192.168.1.6"
+    let ipAddressField = "192.168.0.8"
     let topic = "DriveChannel"
     
     override func viewDidLoad() {
@@ -319,7 +319,7 @@ class SettingsViewController: UIViewController {
                         print(pitch)
                         if pitch < -50 {
                             if self.flag < 1{
-                                self.mqttManager.publish(with: "3")
+                                self.mqttManager.publish(with: "2")
                                 self.flagz=0
                             }
                             self.flag=self.flag+1
@@ -327,7 +327,7 @@ class SettingsViewController: UIViewController {
                         
                         if pitch > 50 {
                             if self.flag < 1{
-                                self.mqttManager.publish(with: "2")
+                                self.mqttManager.publish(with: "3")
                                 self.flagz=0
                             }
                             self.flag=self.flag+1
